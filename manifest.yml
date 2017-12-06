@@ -1,0 +1,5 @@
+---
+applications:
+ - name: Angular_Node_JS_HelloWorld
+   random-route: true
+   memory: 256M

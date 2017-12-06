@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="helloWorldModule">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Angular and Node JS Hello World App</title>
+<link rel="stylesheet"
+	href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<!-- load bootstrap -->
+<style>
+html {
+	overflow-y: scroll;
+}
+
+body {
+	padding-top: 50px;
+}
+
+#helloWorldForm {
+	margin-bottom: 50px;
+}
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<!-- load angular -->
+<script src="app.js"></script>
+</head>
+<body ng-controller="helloWorldController">
+	<div class="container">
+		<div id="helloWorldForm" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<h4 style="margin-bottom: 30px;">Welcome to Hello World
+					Angular, Node JS Integrated Application</h4>
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control input-lg text-center"
+							placeholder="Please Enter Some Text Here"
+							ng-model="formData.message">
+					</div>
+					<button type="submit" class="btn btn-primary btn-lg"
+						ng-click="showMessage()">Invoke Node JS</button>
+
+					<pre style="margin-top: 15px;">Response From Node JS Service : {{responseMessage}}</pre>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
