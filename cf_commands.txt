@@ -1,0 +1,4 @@
+cf api 	https://api.eu-gb.bluemix.net
+cf login
+cf push
+cf apps
